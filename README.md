@@ -1,11 +1,11 @@
 # PANEUROUNI Základy programovania - BIAX10029 course
 
-![Hugo 0.143.1](https://img.shields.io/badge/Powered%20by%20Hugo-0.143.1-ff4088)
+![Hugo 0.148.2](https://img.shields.io/badge/Powered%20by%20Hugo-0.148.2-ff4088)
 ![GitHub License](https://img.shields.io/github/license/interes-group/PEVS-ZAPR-BIAX10029)
 [![Deploy site to GitHub Pages](https://github.com/Interes-Group/PEVS-ZAPR-BIAX10029/actions/workflows/gh-pages.yaml/badge.svg)](https://github.com/Interes-Group/PEVS-ZAPR-BIAX10029/actions/workflows/gh-pages.yaml)
 
-This repository hosts the website for the university course **"Základy programovania"** (Data Structures and
-Algorithms) for the 2025/2026 summer semester. Built with [Hugo](https://gohugo.io/)
+This repository hosts the website for the university course **"Základy programovania"** (Fundamentals of Programming)
+for the 2025/2026 summer semester. Built with [Hugo](https://gohugo.io/)
 and [Hextra theme](https://github.com/imfing/hextra), this site provides course
 materials, announcements, and additional resources to support both students and instructors.
 
@@ -18,7 +18,7 @@ materials, announcements, and additional resources to support both students and 
 
 ## Prerequisites
 
-- **Hugo:** Version 0.143 or higher is recommended.  
+- **Hugo:** Version 0.148 or higher is recommended.
   Installation instructions can be found on the [Hugo website](https://gohugo.io/getting-started/installing/).
 - **Git:** Basic knowledge of Git is necessary to clone the repository and contribute.
 

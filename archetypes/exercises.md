@@ -6,7 +6,7 @@ type: 'exercise'
 
 // TODO popis
 
-{{< pdf "./pevs-dsa-XXX.pdf" >}}
+{{< pdf "./pevs-zapr-XXX.pdf" >}}
 
 ### Náplň
 
@@ -15,21 +15,17 @@ type: 'exercise'
 > [!IMPORTANT]
 > Ak používate ako vývojové prostredie lokálny a editor a následnú kompiláciu cez terminál. Použite príkaz:
 > ```shell
-> g++ -o program -Wall -Wextra main.cpp
+> gcc -std=c17 -o program -Wall -Wextra main.c
 > ```
 
-Pre vypracovanie týchto úloh odporúčam mať funkčné lokálne vývojové prostredie (VS Code, CLion a pod.) a kompilátor
-jazyka C++.
-
-> [!IMPORTANT]
-> Nezabudnite každú alokovanú pamäť uvoľniť volaním operátorom `delete <premenná>`! Je dôležité si po sebe vždy
-> upratať.
+Pre vypracovanie týchto úloh úplne postačuje použitie online kompilátora jazyku C. Napríklad
+stránku [OneCompiler for C](https://onecompiler.com/c)
 
 Riešenia na jednotlivé úlohy budú uverejnené neskôr.
 
 ## Úlohy
 
 {{< cards cols="2" >}}
-    {{< card link="./task-X-X" title="Úloha X.X" subtitle="" icon="document" >}}
-    {{< card link="./task-X-Y" title="Úloha X.Y" subtitle="" icon="document" tag="Komplexné" tagType="info" >}}
+{{< card link="./task-X-X" title="Úloha X.X" subtitle="" icon="document" >}}
+{{< card link="./task-X-Y" title="Úloha X.Y" subtitle="" icon="document" tag="Komplexné" tagType="info" >}}
 {{< /cards >}}
