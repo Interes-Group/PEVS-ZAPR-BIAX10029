@@ -19,8 +19,18 @@ obrazovku čísla 20 a 25.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main()
+{
+    int strana_a = 5;
+    
+    printf("Veľkosť strany štvorca: %d\n",strana_a);
+    printf("Obvod štvorca: %d\n", 4 * strana_a);
+    printf("Obsah štvorca: %d\n", strana_a * strana_a);
+    return 0;
+}
+```
 
 {{< /details >}}

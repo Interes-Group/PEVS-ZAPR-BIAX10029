@@ -16,8 +16,28 @@ po prehodení hodnôt, teda prvá premenná bude mať hodnotu _8_ a druhá preme
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main()
+{
+    int prva;
+    int druha;
+    
+    printf("Zadajte prvú hodnotu: ");
+    scanf("%d",&prva);
+    
+    printf("Zadajte druhú hodnotu: ");
+    scanf("%d",&druha);
+    
+    int odlozena = prva;
+    prva = druha;
+    druha = odlozena;
+    
+    printf("Prehodené hodnoty sú: prvá=%d, druhá=%d",prva, druha);
+    
+    return 0;
+}
+```
 
 {{< /details >}}

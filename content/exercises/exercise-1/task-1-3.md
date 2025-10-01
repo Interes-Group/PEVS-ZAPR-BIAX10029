@@ -54,8 +54,25 @@ Rôzne špecifikácii formátu môžte nájsť v [tejto dokumentácii](https://c
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main()
+{
+    int sekundy = 10000;
+    
+    int hodiny, minuty, zvysne_sekundy;
+    
+    hodiny = sekundy / 3600;
+    minuty = (sekundy % 3600) / 60;
+    zvysne_sekundy = sekundy % 60;
+    
+    printf("Vstupný počet sekúnd: %d\n",sekundy);
+    printf("hodiny: %d\n",hodiny);
+    printf("minúty: %d\n", minuty);
+    printf("sekundy: %d\n", zvysne_sekundy);
+    return 0;
+}
+```
 
 {{< /details >}}

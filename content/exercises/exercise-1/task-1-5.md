@@ -19,8 +19,26 @@ Ak používateľ zadá výšku 1.82m a váhu 72kg výsledné vypočítané BMI j
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main()
+{
+    float vaha;
+    float vyska;
+    
+    printf("Zadajte vašu výšku v metroch: ");
+    scanf("%f",&vyska);
+    
+    printf("Zadajte vašu váhu v kilogramoch: ");
+    scanf("%f",&vaha);
+    
+    float bmi = vaha / (vyska * vyska);
+    
+    printf("Vaše BMI je %.2f",bmi);
+    
+    return 0;
+}
+```
 
 {{< /details >}}

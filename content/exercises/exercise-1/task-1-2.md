@@ -19,8 +19,19 @@ na obrazovku.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main()
+{
+    int strana_a = 3;
+    int strana_b = 8;
+    
+    printf("Strany obdĺžníka: a=%d, b=%d\n",strana_a, strana_b);
+    printf("Obvod obdĺžníka: %d\n", (2 * strana_a) + (2 * strana_b));
+    printf("Obsah obdĺžníka: %d\n", strana_a * strana_b);
+    return 0;
+}
+```
 
 {{< /details >}}

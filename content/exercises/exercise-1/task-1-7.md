@@ -21,8 +21,29 @@ Ak kilometre = 9.7, minuty = 29 a sekundy = 55, potom priemerná rýchlosť cykl
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main()
+{
+    float km;
+    int m,s;
+    
+    printf("Zadajte prejdenú vzdialenosť v km: ");
+    scanf("%f",&km);
+    
+    printf("Zadajte prejdené minuty: ");
+    scanf("%d",&m);
+    
+    printf("Zadajte prejdené sekundy: ");
+    scanf("%d",&s);
+    
+    float celkovy_cas_v_hodinach = (m/60.0)+(s/3600.0);
+    
+    printf("Vaša priemerná rýchlosť bola %.2f km/h", km/celkovy_cas_v_hodinach);
+    
+    return 0;
+}
+```
 
 {{< /details >}}

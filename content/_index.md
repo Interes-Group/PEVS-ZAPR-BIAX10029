@@ -13,7 +13,7 @@ Na tejto stránke nájdete všetky materiály, ktoré sú potrebné pre štúdiu
 {{< card link="./exercises" title="Úlohy z cvičení" subtitle="Úlohy pre cvičenia budu pridávané postupne počas semestra." icon="check-circle" >}}
 {{< card link="./lectures" title="Záznamy z prednášok" subtitle="Záznamy z prednášok budú pridávané postupne počas semestra." icon="clipboard-list" >}}
 {{< card link="./examples" title="Príklady programov pre demonštráciu prebranej látky" icon="code" >}}
-{{< card link="./other" title="a ďalšie" icon="gift" >}}
+{{< card link="./guides" title="Návody a ďalšie" icon="gift" >}}
 {{< /cards >}}
 
 ## Priebeh predmetu

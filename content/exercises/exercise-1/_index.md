@@ -1,6 +1,7 @@
 ---
 date: '2025-09-24T23:00:37+02:00'
 title: 'Cvičenie 01'
+weight: 1
 ---
 
 Na prvom cvičení je cieľom sa oboznámiť s programovacím jazykom, vývojovým prostredím a rozmýšľaním ako vyriešiť

@@ -21,8 +21,20 @@ Ak používateľa zadá na vstupe teplotu 20.5 °C výsledná teplota bude vypí
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main()
+{
+    float c,f;
+    
+    printf("Zadajte teplutu v °C: ");
+    scanf("%f",&c);
+    
+    printf("Teplota vo Fahrenhei stupnici: %.2f°F",(c * 9/5)+32);
+    
+    return 0;
+}
+```
 
 {{< /details >}}

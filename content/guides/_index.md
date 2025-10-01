@@ -1,6 +1,6 @@
 ---
 date: '2025-02-14T18:21:46+01:00'
-title: 'Rôzne'
+title: 'Návody'
 ---
 
 {{< cards cols="2" >}}
