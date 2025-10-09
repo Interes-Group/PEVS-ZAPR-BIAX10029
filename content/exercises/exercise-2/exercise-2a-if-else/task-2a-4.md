@@ -21,8 +21,31 @@ priestupný**.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int rok;
+
+    printf("Zadajte rok: ");
+    scanf("%d", &rok);
+
+    if(rok % 4 == 0){
+        if(rok % 100 == 0) {
+            if(rok % 400 == 0) {
+                printf("priestupny");
+            } else {
+                printf("nepriestupny");
+            }
+        } else {
+            printf("priestupny");
+        }
+    } else {
+        printf("nepriestupny");
+    }
+
+    return 0;
+}
+```
 
 {{< /details >}}

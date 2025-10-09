@@ -28,8 +28,27 @@ spolu s menami riadkov a stĺpcov pre čísla od 1 po 10. Očakávaný výsledok
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main(void) {
+    // Hlavička stĺpcov (prvý prázdny roh tabuľky)
+    printf("%4s", "");
+    for (int j = 1; j <= 10; ++j) {
+        printf("%4d", j);
+    }
+    printf("\n");
+
+    // Riadky tabuľky s menami riadkov a hodnotami
+    for (int i = 1; i <= 10; ++i) {
+        printf("%-4d", i);            // meno riadka (ľavé zarovnanie v šírke 4)
+        for (int j = 1; j <= 10; ++j) {
+            printf("%4d", i * j);     // hodnota bunky (pravé zarovnanie v šírke 4)
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
 
 {{< /details >}}

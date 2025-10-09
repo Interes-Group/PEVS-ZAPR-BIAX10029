@@ -37,8 +37,24 @@ Keďže N = 5, vypíšeme len 5 členov postupnosti.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int a0, d, n;
+
+    printf("Zadajte parametre aritmetickej postupnosti a0 d n (čísla musia byť oddelené medzerou): ");
+    scanf("%d %d %d", &a0, &d, &n);
+
+    printf("%d\n", a0);
+    int previous = a0;
+    for (int i = 0; i < n-1; i++) {
+        previous += d;
+        printf("%d\n", previous);
+    }
+
+    return 0;
+}
+```
 
 {{< /details >}}

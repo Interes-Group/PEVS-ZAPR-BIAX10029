@@ -32,8 +32,44 @@ Rozpad výpočtu by bol takto:
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    float units;
+
+    printf("Zadajte vašu spotrebu elektriny: ");
+    scanf("%f", &units);
+
+    float price = 0;
+    if (units < 50) {
+        printf("%.2f€", 0.5 * units * 1.2);
+        return 0;
+    }
+    price += 25; // pretože 50 * 0.25
+    units -= 50;
+
+    if (units - 100 <= 0) {
+        price += 0.75 * units;
+        printf("%.2f€", price * 1.2);
+        return 0;
+    }
+    price += 75; // pretože 100 * 0.75
+    units -= 100;
+
+    if (units - 100 <= 0) {
+        price += 1.2 * units;
+        printf("%.2f€", price * 1.2);
+        return 0;
+    }
+    price += 120; // pretože 100 * 1.2
+    units -= 100;
+
+    price += 1.5 * units;
+    printf("%.2f€", price * 1.2);
+
+    return 0;
+}
+```
 
 {{< /details >}}

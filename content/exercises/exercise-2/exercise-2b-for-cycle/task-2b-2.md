@@ -17,8 +17,23 @@ začínajúc dvojkou. Počet čísiel na vypísanie určuje používateľ zo št
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int n;
+
+    printf("Zadajte číslo: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n * 2; i++) {
+        if (i % 2 == 0) {
+            printf("%d\n", i);
+        }
+    }
+
+    return 0;
+}
+```
 
 {{< /details >}}

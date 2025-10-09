@@ -15,8 +15,21 @@ Pre číslo **10** na vstupe program vypíše postupnosť **1 2 3 4 5 6 7 8 9 10
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int n;
+
+    printf("Zadajte číslo: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        printf("%d ", i);
+    }
+
+    return 0;
+}
+```
 
 {{< /details >}}

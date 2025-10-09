@@ -17,8 +17,27 @@ Ak používateľ zadá ako vstup **5** program vypíše číslo **31**.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int mesiac;
+
+    printf("Zadajte mesiac: ");
+    scanf("%d", &mesiac);
+
+    if(mesiac == 1 || mesiac == 3 || mesiac == 5 || mesiac == 7 || mesiac == 8 || mesiac == 10 || mesiac == 11){
+        printf("31");
+    } else if (mesiac == 4 || mesiac == 6 || mesiac == 9 || mesiac == 11) {
+        printf("30");
+    } else if (mesiac == 2) {
+        printf("28 (v priestupný rok 29)");
+    } else {
+        printf("nezadali ste platný mesiac");
+    }
+
+    return 0;
+}
+```
 
 {{< /details >}}

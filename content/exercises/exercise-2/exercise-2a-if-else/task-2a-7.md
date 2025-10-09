@@ -20,8 +20,25 @@ Pre vstup **1** od používateľa program vypíše **Utorok**.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+char DAY_OF_WEEK[7][10] = {"Pondelok", "Utorok", "Streda", "Štvrtok", "Piatok", "Sobota", "Nedeľa"};
+
+int main() {
+    int day;
+
+    printf("Zadajte poradové číslo dňa (začínajúce 0): ");
+    scanf("%d", &day);
+
+    if (day >= 0 && day < 7) {
+        printf("%s", DAY_OF_WEEK[day]);
+    } else {
+        printf("Musíte zadať číslo medzi 0 a 6 vrátane");
+    }
+
+    return 0;
+}
+```
 
 {{< /details >}}

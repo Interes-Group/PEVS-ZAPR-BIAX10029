@@ -19,8 +19,23 @@ Spustenie programu s parametrami 2 a 5 vráti hodnotu 10.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int a, b;
+
+    printf("Zadajte dve čísla oddelené medzerou: ");
+    scanf("%d %d", &a, &b);
+
+    int r = 0;
+    for (int i = 0; i < b; i++) {
+        r += a;
+    }
+    printf("%d", r);
+
+    return 0;
+}
+```
 
 {{< /details >}}

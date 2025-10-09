@@ -23,8 +23,24 @@ Spustenie programu s parametrom 5 vypíše:
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int n;
+
+    printf("Zadajte číslo: ");
+    scanf("%d", &n);
+
+    for(int i=1; i <= n; i++){
+        for(int j=1; j <= i; j++){
+            printf("%d ",j);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
 
 {{< /details >}}

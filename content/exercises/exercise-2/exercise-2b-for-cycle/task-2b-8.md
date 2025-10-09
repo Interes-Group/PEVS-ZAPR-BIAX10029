@@ -21,8 +21,32 @@ Program implementujte bez použitia operátora * (násobenie) a bez použitia op
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main(void) {
+    int n, k;
+
+    if (scanf("%d %d", &n, &k) != 2) return 1;
+
+    if (k == 0) {
+        printf("1\n");
+        return 0;
+    }
+
+    int result = 1;
+    for (int i = 0; i < k; ++i) {
+        int prev = result;
+        int acc = 0;
+        for (int j = 0; j < n; ++j) {
+            acc += prev;          // násobenie iba opakovaným pripočítavaním
+        }
+        result = acc;             // result *= n; (bez použitia *)
+    }
+
+    printf("%d\n", result);
+    return 0;
+}
+```
 
 {{< /details >}}

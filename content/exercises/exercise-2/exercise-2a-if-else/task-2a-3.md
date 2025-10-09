@@ -16,8 +16,22 @@ Ak používateľ zadá ako vstup číslo **24**, program vypíše **párne**, ak
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int a;
+
+    printf("Zadajte číslo: ");
+    scanf("%d", &a);
+    if (a % 2 == 0) {
+        printf("párne");
+    } else {
+        printf("nepárne");
+    }
+
+    return 0;
+}
+```
 
 {{< /details >}}

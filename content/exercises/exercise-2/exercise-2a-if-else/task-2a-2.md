@@ -18,8 +18,24 @@ a pre vstup **0** vypíše **nula**.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int cislo;
+
+    printf("Zadajte číslo: ");
+    scanf("%d", &cislo);
+
+    if (cislo < 0) {
+        printf("negatívne", cislo);
+    } else if (cislo > 0) {
+        printf("pozitívne", cislo);
+    } else if (cislo == 0) {
+        printf("nula", cislo);
+    }
+    return 0;
+}
+```
 
 {{< /details >}}

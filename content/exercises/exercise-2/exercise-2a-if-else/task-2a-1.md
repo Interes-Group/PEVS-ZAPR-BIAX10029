@@ -15,8 +15,22 @@ Ak používateľ zadá ako vstup čísla **5** a **8** tak program vypíše čí
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int a, b;
+
+    printf("Zadajte dve čísla oddelené medzerou: ");
+    scanf("%d %d", &a, &b);
+    if (a < b) {
+        printf("%d", b);
+    } else {
+        printf("%d", a);
+    }
+
+    return 0;
+}
+```
 
 {{< /details >}}

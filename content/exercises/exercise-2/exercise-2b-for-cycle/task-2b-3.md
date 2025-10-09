@@ -17,8 +17,23 @@ používateľ cez štandardný vstup.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int n;
+
+    printf("Zadajte číslo: ");
+    scanf("%d", &n);
+
+    int sum = 0;
+    for (int i = 1; i <= n; i++) {
+        sum += i * i;
+    }
+    printf("%d", sum);
+
+    return 0;
+}
+```
 
 {{< /details >}}

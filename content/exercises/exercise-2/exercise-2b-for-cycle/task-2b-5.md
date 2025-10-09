@@ -51,8 +51,35 @@ Pre **n = 3** (mriežka s 3 „riadkami“ a 3 „stĺpcami“) by mriežka vyze
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int n;
+
+    printf("Zadajte veľkosť mriežky: ");
+    scanf("%d", &n);
+
+    for (int i = 0; i < n*5; i++) {
+        if (i % 5 == 0) {
+            for (int j = 0; j < n; j++) {
+                printf("+ - - - - ");
+            }
+            printf("+\n");
+        } else {
+            for (int j = 0; j < n; j++) {
+                printf("|         ");
+            }
+            printf("|\n");
+        }
+    }
+    for (int j = 0; j < n; j++) {
+        printf("+ - - - - ");
+    }
+    printf("+\n");
+
+    return 0;
+}
+```
 
 {{< /details >}}
