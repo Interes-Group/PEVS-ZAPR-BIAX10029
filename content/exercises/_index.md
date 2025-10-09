@@ -23,4 +23,5 @@ Cvičenia sa konajú každý **štvrtok od 12:40 do 14:15 v učebni 101 (knižni
 {{< cards cols="2" >}}
 {{< card link="./exercise-1/" title="Cvičenie 1" subtitle="Úvod do programovania" icon="" >}}
 {{< card link="./exercise-2/" title="Cvičenie 2" subtitle="Control Flow (if-else) a For-cyklus" icon="" >}}
+{{< card link="./exercise-3/" title="Cvičenie 3" subtitle="Funkcie" icon="" >}}
 {{< /cards >}}
