@@ -2,6 +2,7 @@
 date: '2025-10-09T10:00:11+02:00'
 title: 'Cvičenie 03'
 type: 'exercise'
+weight: 3
 ---
 
 Na tomto cvičení si prejdeme vytváranie a používanie funkcií.
