@@ -19,8 +19,32 @@ vypíše príslušnú chybovú správu a vráti hodnotu -1. V prípade, že _n_ 
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int sucet_nacitanych(int n) {
+    if (n < 0) {
+        printf("paramter n nemôže byť záporné číslo\n");
+        return -1;
+    }
+    if (n == 0) return 0;
+    int sum = 0;
+    for (int i = 0; i < n; ++i) {
+        int input;
+        printf("Zadaj %d. cislo: ", i + 1);
+        scanf("%d", &input);
+        sum += input;
+    }
+    return sum;
+}
+
+int main() {
+
+    printf("%d\n", sucet_nacitanych(-1));
+    printf("%d\n", sucet_nacitanych(4));
+
+    return 0;
+}
+```
 
 {{< /details >}}

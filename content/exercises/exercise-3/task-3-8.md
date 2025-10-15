@@ -25,8 +25,52 @@ ktoré boli deliteľné číslom k.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+// Funkcia pocet_delitelnych:
+// Načíta n čísel a vráti počet tých, ktoré sú deliteľné číslom k.
+// Ak n < 0 alebo k <= 0, vypíše chybové hlášky a vráti -1.
+int pocet_delitelnych(int n, int k) {
+    int pocet = 0;
+    int cislo;
+
+    // Ošetrenie chybných vstupov
+    int chyba = 0;
+    if (n < 0) {
+        printf("Chyba: hodnota n je záporná.\n");
+        chyba = 1;
+    }
+    if (k <= 0) {
+        printf("Chyba: hodnota k nie je kladná.\n");
+        chyba = 1;
+    }
+
+    if (chyba)
+        return -1;
+
+    // Načítanie n čísel
+    printf("Zadajte %d čísel:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &cislo);
+        if (cislo % k == 0)
+            pocet++;
+    }
+
+    return pocet;
+}
+
+int main(void) {
+    int n, k;
+    printf("Zadajte hodnoty n a k: ");
+    scanf("%d %d", &n, &k);
+
+    int vysledok = pocet_delitelnych(n, k);
+    if (vysledok != -1)
+        printf("Počet čísel deliteľných %d je: %d\n", k, vysledok);
+
+    return 0;
+}
+```
 
 {{< /details >}}

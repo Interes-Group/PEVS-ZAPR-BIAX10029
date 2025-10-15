@@ -21,8 +21,31 @@ korektnosť parametrov _a_ a _d_.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+// Funkcia delitelnost:
+// Vráti 1, ak d delí a, inak 0.
+int delitelnost(int a, int d) {
+    if (a % d == 0)
+        return 1;
+    else
+        return 0;
+}
+
+int main(void) {
+    int a, d;
+    printf("Zadajte dve kladné celé čísla a a d: ");
+    scanf("%d %d", &a, &d);
+
+    int vysledok = delitelnost(a, d);
+    if (vysledok == 1)
+        printf("%d delí %d.\n", d, a);
+    else
+        printf("%d nedelí %d.\n", d, a);
+
+    return 0;
+}
+```
 
 {{< /details >}}

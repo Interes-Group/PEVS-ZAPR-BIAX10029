@@ -24,8 +24,32 @@ vypíše, že vstupný argument musí byť nezáporné číslo a vráti hodnotu 
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int pocet_delitelnych_5(int n) {
+    if (n < 0) {
+        printf("Vstupný argument n musí byť nezáporné číslo\n");
+        return -1;
+    }
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        printf("Zadajte ľubovolné číslo: ");
+        int input;
+        scanf("%d", &input);
+        if (input % 5 == 0) count++;
+    }
+    return count;
+}
+
+int main() {
+
+    printf("%d\n", pocet_delitelnych_5(5));
+    printf("%d\n", pocet_delitelnych_5(4));
+    printf("%d\n", pocet_delitelnych_5(-3));
+
+    return 0;
+}
+```
 
 {{< /details >}}

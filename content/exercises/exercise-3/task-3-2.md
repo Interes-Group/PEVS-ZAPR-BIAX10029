@@ -18,8 +18,20 @@ týchto
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+float priemer_troch(float a, float b, float c) {
+    return (a + b + c) / 3.0;
+}
+
+int main() {
+
+    printf("%.2f\n", priemer_troch(1, 2, 3));
+    printf("%.2f\n", priemer_troch(1, 2, 4.5));
+
+    return 0;
+}
+```
 
 {{< /details >}}

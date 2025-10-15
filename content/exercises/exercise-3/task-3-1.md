@@ -21,8 +21,21 @@ parameter a vráti hodnotu tretiu mocninu parametra _a_.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int tretia_mocnina(int a) {
+    return a * a * a;
+}
+
+int main() {
+
+    printf("%d\n", tretia_mocnina(1));
+    printf("%d\n", tretia_mocnina(2));
+    printf("%d\n", tretia_mocnina(3));
+
+    return 0;
+}
+```
 
 {{< /details >}}

@@ -26,8 +26,43 @@ využite funkciu delitelnost() z predošlej úlohy!
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+// Funkcia delitelnost:
+// Vráti 1, ak d delí a, inak 0.
+int delitelnost(int a, int d) {
+    if (a % d == 0)
+        return 1;
+    else
+        return 0;
+}
+
+// Funkcia je_prvocislo:
+// Vráti 1, ak je číslo a prvočíslo, inak 0.
+int je_prvocislo(int a) {
+    if (a == 2)
+        return 1; // 2 je prvočíslo
+
+    for (int i = 2; i < a; i++) {
+        if (delitelnost(a, i)) // ak i delí a
+            return 0;          // a nie je prvočíslo
+    }
+    return 1; // žiadne číslo nedelí a -> prvočíslo
+}
+
+int main(void) {
+    int a;
+    printf("Zadajte celé číslo väčšie alebo rovné 2: ");
+    scanf("%d", &a);
+
+    if (je_prvocislo(a))
+        printf("%d je prvočíslo.\n", a);
+    else
+        printf("%d nie je prvočíslo.\n", a);
+
+    return 0;
+}
+```
 
 {{< /details >}}

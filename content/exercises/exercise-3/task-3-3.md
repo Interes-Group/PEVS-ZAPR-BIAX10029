@@ -18,8 +18,22 @@ týchto 2 čísiel.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int minimum_dvoch(int a, int b) {
+    if (a < b) return a;
+    return b;
+}
+
+int main() {
+
+    printf("%d\n", minimum_dvoch(2,5));
+    printf("%d\n", minimum_dvoch(5,5));
+    printf("%d\n", minimum_dvoch(-2,-105));
+
+    return 0;
+}
+```
 
 {{< /details >}}

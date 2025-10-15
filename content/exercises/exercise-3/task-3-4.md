@@ -21,8 +21,22 @@ Definujte funkciu **_int pocet_rovnakych(int a, int b, int c)_** s 3 parametrami
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int pocet_rovnakych(int a, int b, int c){
+    if(a != b && a != c && b != c) return 0;
+    if(a == b && b == c) return 3;
+    if(a == b || a == c || b == c) return 2;
+}
 
+int main() {
+
+    printf("%d\n", pocet_rovnakych(2,5,8));
+    printf("%d\n", pocet_rovnakych(1,2,1));
+    printf("%d\n", pocet_rovnakych(10,10,10));
+
+    return 0;
+}
+```
 {{< /details >}}

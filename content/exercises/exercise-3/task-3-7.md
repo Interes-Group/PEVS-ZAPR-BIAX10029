@@ -26,8 +26,59 @@ musí byť aspoň 2 a ukončí program.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
+#include <limits.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int druhe_najvacsie(int n) {
+    if (n < 2) {
+        printf("Chyba: hodnota vstupného argumentu musí byť aspoň 2.\n");
+        return -1;
+    }
+
+    int max1 = INT_MIN;  // Najväčšie číslo
+    int max2 = INT_MIN;  // Druhé najväčšie číslo
+    int num;
+
+    for (int i = 0; i < n; i++) {
+        printf("Číslo %d: ", i + 1);
+        scanf("%d", &num);
+
+        // Ak je nové číslo väčšie ako max1, posunieme max1 do max2
+        if (num > max1) {
+            max2 = max1;
+            max1 = num;
+        }
+            // Ak je nové číslo menšie ako max1, ale väčšie ako max2
+        else if (num > max2 && num != max1) {
+            max2 = num;
+        }
+    }
+
+    if (max2 == INT_MIN) {
+        printf("Nie je možné určiť druhé najväčšie číslo.\n");
+        return -1;
+    }
+
+    return max2;
+}
+
+int main() {
+
+    int output = druhe_najvacsie(5);
+    if (output == -1) return 1;
+    else printf("%d\n", output);
+
+    output = druhe_najvacsie(3);
+    if (output == -1) return 1;
+    else printf("%d\n", output);
+
+    output = druhe_najvacsie(1);
+    if (output == -1) return 1;
+    else printf("%d\n", output);
+
+    return 0;
+}
+```
 
 {{< /details >}}
