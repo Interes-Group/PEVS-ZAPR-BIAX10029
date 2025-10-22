@@ -21,8 +21,49 @@ Pre voľbu parametra **k = 1** sa program správa rovnako ako predošlá verzia 
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+### Riešenie 1
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+```C
+#include <stdio.h>
+
+int sum(int k, int n) {
+    int suma = 0;
+    for (int i = 1; i <= n; ++i) {
+        int mocnina = 1;
+        for (int j = 0; j < k; j++) {
+            mocnina *= i;
+        }
+        suma += mocnina;
+    }
+    printf("súčet %d-tych mocnín čísel 1-%d = %d\n", k, n, suma);
+}
+
+int main() {
+    sum(1,7);
+    sum(3,5);
+    return 0;
+}
+```
+
+### Riešenie 2
+
+```C
+#include <stdio.h>
+#include <math.h>
+
+int sum(int k, int n) {
+    int suma = 0;
+    for (int i = 1; i <= n; ++i) {
+        suma += pow(i,k);
+    }
+    printf("súčet %d-tych mocnín čísel 1-%d = %d\n", k, n, suma);
+}
+
+int main() {
+    sum(1,7);
+    sum(3,5);
+    return 0;
+}
+```
 
 {{< /details >}}

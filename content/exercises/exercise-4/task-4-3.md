@@ -22,8 +22,23 @@ Všimnite si, že pre parameter s hodnotou **10** sa program správa rovnako ako
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int sum(int limit){
+    int sum = 0;
+    for (int i = 1; i <= limit; ++i) {
+        sum += i;
+    }
+    printf("sum 1-%d = %d\n", limit, sum);
+}
+
+int main() {
+    sum(5);
+    sum(13);
+    sum(7);
+    return 0;
+}
+```
 
 {{< /details >}}

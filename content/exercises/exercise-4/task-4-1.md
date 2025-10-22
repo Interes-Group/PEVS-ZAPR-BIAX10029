@@ -14,8 +14,18 @@ Očakávaný výsledok je číslo 55.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int sum = 0;
+    for (int i = 1; i <= 10; ++i) {
+        sum += i;
+    }
+    printf("sum 1-10 = %d", sum);
+
+    return 0;
+}
+```
 
 {{< /details >}}
