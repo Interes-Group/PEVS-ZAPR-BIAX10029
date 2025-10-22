@@ -5,7 +5,7 @@ weight: 2
 ---
 
 Napíšte program, zdrojový kód, v jazyku C použitím štandardu C17, v ktorom zapúzdrite funkciu súčtu
-z [Úlohy 4.1](./task-4-1.md) do
+z [Úlohy 4.1](/exercises/exercise-4/task-4-1) do
 funkcie
 `int suma()`. Funkciu zavolajte z hlavnej funkcie `main()`, aby sa spustila. Výsledok, ktorý vráti funkcia vypíšte na
 obrazovku používateľovi.

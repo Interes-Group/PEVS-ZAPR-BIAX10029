@@ -5,12 +5,12 @@ weight: 4
 ---
 
 Napíšte program, zdrojový kód, v jazyku C použitím štandardu C17, v ktorom zovšeobecnite funkciu suma
-z [Úlohy 4.3](./task-4-3.md),
+z [Úlohy 4.3](/exercises/exercise-4/task-4-3),
 tak aby vrátila súčet K-tych mocnín čísel od 1 po N. Funkciu zavolajte z hlavnej funkcie `main()` s rôznymi hodnotami
 pre vstupný parameter.
 Výsledky, ktoré vráti funkcia vypíšte na obrazovku používateľovi.
 
-Pre voľbu parametra **k = 1** sa program správa rovnako ako predošlá verzia z [Úlohy 4.3](./task-4-3.md).
+Pre voľbu parametra **k = 1** sa program správa rovnako ako predošlá verzia z [Úlohy 4.3](/exercises/exercise-4/task-4-3).
 
 ### Príklady vstupov / výstupov programu
 

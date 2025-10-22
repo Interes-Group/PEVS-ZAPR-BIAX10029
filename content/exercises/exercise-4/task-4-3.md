@@ -5,12 +5,12 @@ weight: 3
 ---
 
 Napíšte program, zdrojový kód, v jazyku C použitím štandardu C17, v ktorom zovšeobecnite funkciu
-z [Úlohy 4.2](./task-4-2.md),
+z [Úlohy 4.2](/exercises/exercise-4/task-4-2),
 tak aby vrátila súčet čísel od 1 po N. Funkciu zavolajte z hlavnej funkcie `main()` s rôznymi hodnotami pre vstupný
 parameter.
 Výsledky, ktoré vráti funkcia vypíšte na obrazovku používateľovi.
 
-Všimnite si, že pre parameter s hodnotou **10** sa program správa rovnako ako verzia v [Úlohe 4.2](./task-4-2.md).
+Všimnite si, že pre parameter s hodnotou **10** sa program správa rovnako ako verzia v [Úlohe 4.2](/exercises/exercise-4/task-4-2).
 
 ### Príklady vstupov / výstupov programu
 
