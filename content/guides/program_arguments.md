@@ -1,15 +1,10 @@
 ---
 date: '2025-10-23T12:14:12+02:00'
-draft: true
-title: 'Argumenty programu'
+title: 'Práca s argumentami programu v jazyku C'
 ---
-
-# Návod: Práca s argumentami programu v jazyku C
 
 Argumenty programu umožňujú používateľovi odovzdať programu hodnoty pri jeho spustení z príkazového riadka. Táto
 funkčnosť je kľúčová pre vytváranie flexibilných a interaktívnych aplikácií.
-
-## Úvod
 
 Argumenty programu (command-line arguments) umožňujú predať programu hodnoty pri jeho spustení z príkazového riadka. V
 jazyku C sa tieto argumenty spracúvajú pomocou parametrov funkcie `main()`.
