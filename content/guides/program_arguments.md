@@ -283,6 +283,12 @@ int main(int argc, char *argv[]) {
 ./program -o output.txt -n 10
 ```
 
+### Spracovanie prepínačov pomocou `getopt()`
+
+Pre spracovanie prepínačov (flags, options) programu pomocou funkcie `getopts()` viď návod na:
+
+**[Práca s prepínačami programu pomocou getopt()](guides/program_options)**
+
 ## Dobre praktiká
 
 ### 1. Vždy kontrolujte počet argumentov
