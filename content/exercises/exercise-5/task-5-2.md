@@ -36,37 +36,8 @@ Program by mal vytvoriť súbor _vypocty.txt_ s nasledovným obsahom:
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-```C
-#include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
+Musím si počkať kým sa tu objaví príklad riešenia.
 
-int get_input(char *message) {
-    char input[100];
-    printf("%s", message);
-    scanf("%s", input);
-    if (input[0] == 'q') return INT_MIN;
-    return atoi(input);
-}
-
-int main() {
-    FILE *file = fopen("vypocty.txt", "w+");
-    if (file == NULL) return 1;
-
-    while (1) {
-        int a, b, result;
-        a = get_input("Zadajte prvé číslo pre súčet: ");
-        if(a == INT_MIN) break;
-        b = get_input("Zadajte druhé číslo pre súčet: ");
-        result = a + b;
-        printf("%d + %d = %d\n", a, b, result);
-        fprintf(file, "%d %d %d\n", a, b, result);
-        printf("-------------\n");
-    }
-
-    fclose(file);
-    return 0;
-}
-```
+Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
 
 {{< /details >}}

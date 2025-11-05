@@ -26,4 +26,5 @@ Cvičenia sa konajú každý **štvrtok od 12:40 do 14:15 v učebni 101 (knižni
 {{< card link="./exercise-3/" title="Cvičenie 3" subtitle="Funkcie" icon="" >}}
 {{< card link="./exercise-4/" title="Cvičenie 4" subtitle="Funkcie - Zovšeobecnenie a zapúzdrenie" icon="" >}}
 {{< card link="./exercise-5/" title="Cvičenie 5" subtitle="Súbory" icon="" >}}
+{{< card link="./exercise-6/" title="Cvičenie 6" subtitle="Pointre a Polia" icon="" >}}
 {{< /cards >}}

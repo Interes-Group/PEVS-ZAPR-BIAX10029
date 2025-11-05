@@ -26,24 +26,8 @@ Na štvrté prišli tí, ktorí sa chcú niečo naučiť.
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-```C
-#include <stdio.h>
+Musím si počkať kým sa tu objaví príklad riešenia.
 
-int main() {
-    FILE *file = fopen("data.txt", "r");
-    if (file == NULL) return 1;
-
-    int character_limit = 100;
-    char line[character_limit];
-    while (1) {
-        char *result = fgets(line, character_limit, file);
-        if (result == NULL) break;
-        printf("%s", line);
-    }
-
-    fclose(file);
-    return 0;
-}
-```
+Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
 
 {{< /details >}}
