@@ -29,10 +29,6 @@ skompilovateľný a spustiteľný a testovateľný podľa krítérií zadania.
 
 V prípade otázok, problémov alebo akejkoľvek potreby konzultácií môžte kontaktovať cvičiaceho na MS Teams alebo emailom.
 
-### Video s inštrukciami
-
-[//]: # ({{< youtube "" >}})
-
 ---
 
 # 🎮 Gaming Stats Calculator - Kalkulátor herných štatistík
