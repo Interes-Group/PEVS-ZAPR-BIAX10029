@@ -4,3 +4,5 @@ title: 'Prednášky'
 ---
 
 ## Prednáška 1 - 11.10.2025 - Úvod do predmetu
+
+{{< youtube "vRIyFQL8xU4" >}}
