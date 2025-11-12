@@ -31,3 +31,12 @@ Cvičenia sa konajú každý **štvrtok od 12:40 do 14:15 v učebni 101 (knižni
 {{< card link="./exercise-8/" title="Cvičenie 8" subtitle="Štruktúry" icon="" >}}
 {{< card link="./exercise-9/" title="Cvičenie 9" subtitle="C++" icon="" >}}
 {{< /cards >}}
+
+---
+
+Doplňujúce projekty
+
+{{< cards cols="2" >}}
+{{< card link="./projects/calculator" title="Kalkulačka" subtitle="" icon="" >}}
+{{< card link="./projects/guess_a_number" title="Uhádni číslo" subtitle="" icon="" >}}
+{{< /cards >}}
