@@ -1,6 +1,7 @@
 ---
 date: '2025-11-13T00:02:13+01:00'
 title: 'Uhádni číslo'
+weight: 101
 ---
 
 Úlohou je naprogramovať jednoduchú hru pomocou jazyka C, štandard C17, v ktorej sa hráč snaží uhádnuť náhodné
@@ -47,10 +48,10 @@ tvorivá
 práca navyše môže byť ocenená bonusovými bodmi.
 
 > [!TIP]
-> Náhodné číslo je možné vygenerovať pomocou funkcie _rand()_, ktorá vráti náhodné číslo medzi 0 a konštantou
-_RAND_MAX_.
-> _rand()_ je funkcia z knižnice _stdlib.h_. Pre použitie je potrebné túto knižnicu najprv zahrnúť do zdrojového kódu na
-> začiatku súboru main.c - `#include &lt;stdlib.h&gt;`
+> Náhodné číslo je možné vygenerovať pomocou funkcie `rand()`, ktorá vráti náhodné číslo medzi 0 a konštantou
+`RAND_MAX`.
+> `rand()` je funkcia z knižnice `stdlib.h`. Pre použitie je potrebné túto knižnicu najprv zahrnúť do zdrojového kódu na
+> začiatku súboru `main.c` - `#include <stdlib.h>`
 >
 > Ak chceme vygenerovať náhodné číslo medzi dvomi hranicami napr. medzi číslom A a číslom B tak vieme použiť vzorec:
 > `rand() % (B - A + 1) + A`

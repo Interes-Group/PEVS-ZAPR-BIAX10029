@@ -1,6 +1,7 @@
 ---
 date: '2025-11-13T00:01:53+01:00'
 title: 'Kalkulačka'
+weight: 100
 ---
 
 Vytvorte program v jazyku C v štandarde C17, ktorý bude slúžiť ako jednoduchá kalkulačka.
