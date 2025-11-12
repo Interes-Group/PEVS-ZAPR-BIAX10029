@@ -1,13 +1,12 @@
 ---
-date: '2025-11-12T23:39:47+01:00'
-title: '⛓️‍💥 Úloha 8.5'
-weight: 5
+date: '2025-11-12T23:55:07+01:00'
+title: 'Úloha 9.3'
+weight: 3
 ---
 
-Napíšte program, zdrojový kód, v jazyku C použitím štandardu C17, ktorý implementuje jednoduchý zreťazený zoznam pomocou
-štruktúr.
-
-Každý prvok zoznamu by mal obsahovať celé kladné číslo a pointer na ďalší prvok.
+Napíšte program, zdrojový kód, v jazyku C++, ktorý implementuje obojstranne zreťazený zoznam pomocou tried.
+Každý prvok zoznamu (trieda `ListItem`) by mal obsahovať celé kladné číslo, pointer na ďalší prvok a pointer na
+predchádzajúci.
 Program umožní používateľovi cez štandardný vstup zadať číslo prvku zoznamu. Po zadaní vstupu je nový prvok pridaný na
 koniec zoznamu
 a následne vypíše celý aktuálny zoznam a znova ponúkne používateľovi zadať ďalší prvok.

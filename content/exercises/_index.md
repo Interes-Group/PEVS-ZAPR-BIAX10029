@@ -27,4 +27,7 @@ Cvičenia sa konajú každý **štvrtok od 12:40 do 14:15 v učebni 101 (knižni
 {{< card link="./exercise-4/" title="Cvičenie 4" subtitle="Funkcie - Zovšeobecnenie a zapúzdrenie" icon="" >}}
 {{< card link="./exercise-5/" title="Cvičenie 5" subtitle="Súbory" icon="" >}}
 {{< card link="./exercise-6/" title="Cvičenie 6" subtitle="Pointre a Polia" icon="" >}}
+{{< card link="./exercise-7/" title="Cvičenie 7" subtitle="Dynamická alokácia pamäte" icon="" >}}
+{{< card link="./exercise-8/" title="Cvičenie 8" subtitle="Štruktúry" icon="" >}}
+{{< card link="./exercise-9/" title="Cvičenie 9" subtitle="C++" icon="" >}}
 {{< /cards >}}

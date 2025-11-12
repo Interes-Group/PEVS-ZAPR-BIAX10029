@@ -23,8 +23,6 @@ if-else výrazov.
 Pre vypracovanie týchto úloh úplne postačuje použitie online kompilátora jazyku C. Napríklad
 stránku [OneCompiler for C](https://onecompiler.com/c)
 
-Riešenia na jednotlivé úlohy budú uverejnené neskôr.
-
 ## Úlohy
 
 {{< cards cols="2" >}}

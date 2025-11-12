@@ -11,7 +11,7 @@ predložený problém ako programátor 😉
 
 ### Náplň
 
-- práca s výpisom do terminálu 
+- práca s výpisom do terminálu
 - práca s premennými
 - použitie základných aritmetických operácií
 - načítanie vstupu používateľa
@@ -22,9 +22,8 @@ predložený problém ako programátor 😉
 > gcc -std=c17 -o program -Wall -Wextra main.c
 > ```
 
-Pre vypracovanie týchto úloh úplne postačuje použitie online kompilátora jazyku C. Napríklad stránku [OneCompiler for C](https://onecompiler.com/c)
-
-Riešenia na jednotlivé úlohy budú uverejnené neskôr.
+Pre vypracovanie týchto úloh úplne postačuje použitie online kompilátora jazyku C. Napríklad
+stránku [OneCompiler for C](https://onecompiler.com/c)
 
 ## Úlohy
 
