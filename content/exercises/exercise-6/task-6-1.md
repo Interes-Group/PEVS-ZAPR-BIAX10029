@@ -25,8 +25,54 @@ Program by mal vypísať na štandardný výstup následné reťazce:
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    // Definícia premenných
+    int m, n, o;
+    int *z;
+
+    // Priradenie hodnôt
+    m = 42; // Ľubovoľná hodnota
+    z = &m; // Pointer z ukazuje na premennú m
+
+    // Výpis požadovaných informácií
+    printf("z stores the address of m = %p\n", z);
+    printf("*z stores the value of m = %d\n", *z);
+    printf("&m is the address of m = %p\n", &m);
+    printf("&n stores the address of n = %p\n", &n);
+    printf("&o stores the address of o = %p\n", &o);
+    printf("&z stores the address of z = %p\n", &z);
+
+    return 0;
+}
+```
+
+#### Vysvetlenie
+
+1. Premenné a pointery:
+    * m, n, a o sú premennej typu int.
+    * z je pointer na int, ktorý uchováva adresu premennej m.
+
+2. Priradenie hodnôt:
+    * Premennej m priraďujeme hodnotu 42 (môže byť ľubovoľná).
+    * Pointer z nastavujeme na adresu premennej m pomocou operátora &.
+
+3. Výpis:
+    * Adresy a hodnoty sa vypisujú pomocou formátovacieho reťazca %p (pre pointery) a %d (pre hodnotu typu int).
+
+#### Príklady výstupu
+
+Po spustení program môže byť výstup nasledovný (samozrejme adresy líšia medzi spusteniami):
+
+```text
+z stores the address of m = 0x7ffcb5e7914c
+*z stores the value of m = 42
+&m is the address of m = 0x7ffcb5e7914c
+&n stores the address of n = 0x7ffcb5e79148
+&o stores the address of o = 0x7ffcb5e79144
+&z stores the address of z = 0x7ffcb5e79138
+```
 
 {{< /details >}}

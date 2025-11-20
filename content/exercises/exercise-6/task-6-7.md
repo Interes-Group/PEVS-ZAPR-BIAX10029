@@ -24,8 +24,49 @@ Pre pole `[9,8,5,1,3]` program vypíše:
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    // Definícia statického poľa
+    int array[] = {10, 20, 30, 40, 50}; // Ľubovoľné hodnoty
+    int size = sizeof(array) / sizeof(array[0]); // Počet prvkov v poli
+
+    // Výpis prvkov poľa odzadu
+    printf("Array elements in reverse order:\n");
+    for (int i = size - 1; i >= 0; i--) {
+        printf("%d\n", array[i]);
+    }
+
+    return 0;
+}
+```
+
+#### Vysvetlenie
+
+1. Definícia poľa:
+    * Pole array[] je inicializované s ľubovoľnými hodnotami, napr. {10, 20, 30, 40, 50}.
+
+2. Výpočet veľkosti poľa:
+    * sizeof(array) vráti celkovú veľkosť poľa v bajtoch.
+    * sizeof(array[0]) vráti veľkosť jedného prvku poľa.
+    * size sa vypočíta ako počet prvkov v poli: sizeof(array) / sizeof(array[0]).
+
+3. Iterácia cez pole odzadu:
+    * Cyklus for iteruje od posledného indexu (size - 1) po prvý index (0).
+    * Prvky sa vypisujú pomocou printf na samostatné riadky.
+
+#### Príklad výstupu
+
+Pri inicializácii poľa int array[] = {10, 20, 30, 40, 50}; bude výstup nasledovný:
+
+```text
+Array elements in reverse order:
+50
+40
+30
+20
+10
+```
 
 {{< /details >}}

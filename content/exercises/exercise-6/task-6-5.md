@@ -30,8 +30,39 @@ Pre pole `[9,8,5,1,3]` program vypíše:
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    // Definícia a inicializácia poľa
+    int array[5] = {10, 20, 30, 40, 50};
+
+    // Prechádzanie poľa a výpis požadovaných informácií
+    for (int i = 0; i < 5; i++) {
+        printf("%d. element of the array %p has address %p with value %d\n", i, array, &array[i], array[i]);
+    }
+
+    return 0;
+}
+```
+
+#### Vysvetlenie
+
+1. Definícia a inicializácia poľa:
+    * Pole array je staticky definované s veľkosťou 5 a inicializované hodnotami {10, 20, 30, 40, 50}.
+
+2. Iterácia cez pole:
+    * for cyklus prechádza všetky indexy poľa od 0 po 4.
+
+3. Výpis informácií:
+    * Pre každý prvok poľa sa vypíše:
+        * Index prvku (i).
+        * Adresa samotného poľa (array).
+        * Adresa konkrétneho prvku (&array[i]).
+        * Hodnota prvku (array[i]).
+
+4. Formátovanie:
+    * %d sa používa na hodnoty typu int.
+    * %p na výpis adries. Adresy sa pretypujú na (void *) pre kompatibilitu so štandardom %p.
 
 {{< /details >}}

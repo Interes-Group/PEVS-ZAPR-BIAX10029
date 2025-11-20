@@ -29,8 +29,61 @@ pohnúť [obrázok na tomto odkaze opisuje algoritmus zoradenia](https://www.w3r
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    // Definícia a inicializácia statického poľa
+    int array[] = {34, 7, 23, 32, 5, 62};
+    int size = sizeof(array) / sizeof(array[0]); // Veľkosť poľa
+
+    // Bubble sort na zoradenie poľa
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (array[j] > array[j + 1]) {
+                // Výmenná operácia
+                int temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
+
+    // Výpis zoradeného poľa
+    printf("Sorted array: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+```
+
+#### Vysvetlenie
+
+1. Definícia poľa:
+    * Pole array[] je inicializované s ľubovoľnými hodnotami, napr. {34, 7, 23, 32, 5, 62}.
+
+2. Výpočet veľkosti poľa:
+    * sizeof(array) určuje veľkosť poľa v bajtoch.
+    * sizeof(array[0]) určuje veľkosť jedného prvku poľa.
+    * Veľkosť poľa je teda size = sizeof(array) / sizeof(array[0]).
+
+3. Bubble sort algoritmus:
+    * Dvojitý cyklus iteruje cez pole.
+    * Ak je aktuálny prvok väčší ako nasledujúci, hodnoty sa vymenia.
+    * Tento proces sa opakuje, až kým pole nie je zoradené.
+
+4. Výpis poľa:
+    * Po zoradení sa prvky poľa vypisujú v jednom riadku oddelené medzerami.
+
+#### Príklad výstupu
+
+Pri inicializácii poľa int array[] = {34, 7, 23, 32, 5, 62}; bude výstup:
+
+```text
+Sorted array: 5 7 23 32 34 62
+```
 
 {{< /details >}}
