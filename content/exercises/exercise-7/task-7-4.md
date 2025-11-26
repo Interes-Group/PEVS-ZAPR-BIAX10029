@@ -36,8 +36,86 @@ C (1 znak)
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int n, maxLen;
+
+    // Načítanie počtu slov a maximálnej dĺžky slova od používateľa
+    printf("Zadajte počet slov: ");
+    scanf("%d", &n);
+
+    if (n <= 0) {
+        printf("Počet slov musí byť kladné číslo.\n");
+        return 1;
+    }
+
+    printf("Zadajte maximálnu dĺžku slova: ");
+    scanf("%d", &maxLen);
+
+    if (maxLen <= 0) {
+        printf("Maximálna dĺžka slova musí byť kladné číslo.\n");
+        return 1;
+    }
+
+    // Alokácia poľa pointerov na reťazce
+    char **words = (char **)malloc(n * sizeof(char *));
+    if (words == NULL) {
+        printf("Nepodarilo sa alokovať pamäť pre pole slov.\n");
+        return 1;
+    }
+
+    // Načítanie slov od používateľa
+    printf("Zadajte slová:\n");
+    for (int i = 0; i < n; i++) {
+        // Alokácia pamäte pre jednotlivé slovo (s miestom pre '\0')
+        words[i] = (char *)malloc((maxLen + 1) * sizeof(char));
+        if (words[i] == NULL) {
+            printf("Nepodarilo sa alokovať pamäť pre slovo %d.\n", i + 1);
+            return 1;
+        }
+
+        // Načítanie slova
+        printf("Slovo %d: ", i + 1);
+        scanf("%s", words[i]);
+    }
+
+    // Výpis slov a ich dĺžok
+    printf("---\nSlová a ich dĺžky:\n");
+    for (int i = 0; i < n; i++) {
+        printf("%s (%zu znakov)\n", words[i], strlen(words[i]));
+    }
+
+    // Uvoľnenie alokovanej pamäte
+    for (int i = 0; i < n; i++) {
+        free(words[i]);
+    }
+    free(words);
+
+    return 0;
+}
+```
+
+#### Vysvetlenie
+
+1. Vstup od používateľa:
+    * Používateľ zadáva počet slov (n) a maximálnu dĺžku slova (maxLen).
+    * Oba vstupy sú validované, aby boli kladné.
+
+2. Dynamická alokácia:
+    * Pole words je alokované pre n pointerov na reťazce.
+    * Pre každý reťazec v poli je alokovaná pamäť veľkosti maxLen + 1 (pre \0).
+
+3. Načítanie slov:
+    * Každé slovo je načítané pomocou scanf a uložené v alokovanej pamäti.
+
+4. Výpis slov a ich dĺžok:
+    * Funkcia strlen z knižnice <string.h> sa používa na získanie dĺžky reťazca.
+
+5. Uvoľnenie pamäte:
+    * Pre každé slovo sa pamäť uvoľní pomocou free, potom sa uvoľní pamäť pre pole pointerov.
 
 {{< /details >}}

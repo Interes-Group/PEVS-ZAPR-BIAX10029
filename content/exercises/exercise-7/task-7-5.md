@@ -37,8 +37,85 @@ Adresa poľa: 0x000044781dcc
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
+#include <stdlib.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int initial_size = 5; // Počiatočná veľkosť poľa
+    int current_size = initial_size; // Aktuálna veľkosť poľa
+    int *array = (int *)malloc(current_size * sizeof(int)); // Alokácia pamäte
+    if (array == NULL) {
+        printf("Nepodarilo sa alokovať pamäť.\n");
+        return 1;
+    }
+
+    int input, count = 0;
+
+    printf("Zadajte hodnoty (zadaním -1 ukončíte):\n");
+    while (1) {
+        scanf("%d", &input);
+        if (input == -1) {
+            break;
+        }
+
+        // Ak pole je plné, zväčšiť veľkosť na dvojnásobok
+        if (count == current_size) {
+            current_size *= 2;
+            int *temp = (int *)realloc(array, current_size * sizeof(int));
+            if (temp == NULL) {
+                printf("Nepodarilo sa zväčšiť pamäť.\n");
+                free(array); // Uvoľnenie pôvodnej pamäte
+                return 1;
+            }
+            array = temp;
+        }
+
+        // Uloženie hodnoty do poľa
+        array[count++] = input;
+    }
+
+    // Výpis načítaných hodnôt
+    printf("---\nZadané hodnoty: ");
+    for (int i = 0; i < count; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    // Výpis konečnej veľkosti poľa a adresy
+    printf("Konečná veľkosť poľa: %d prvkov\n", current_size);
+    printf("Adresa poľa: %p\n", array);
+
+    // Uvoľnenie pamäte
+    free(array);
+
+    return 0;
+}
+```
+
+#### Vysvetlenie
+
+1. Počiatočná veľkosť poľa:
+
+* Pamäť je alokovaná na veľkosť 5 * sizeof(int).
+
+2. Pridávanie hodnôt:
+    * Používateľ zadáva čísla, ktoré sa ukladajú do poľa.
+    * Ak počet prvkov dosiahne aktuálnu veľkosť poľa, veľkosť sa zdvojnásobí pomocou funkcie realloc.
+
+3. Zväčšenie pamäte:
+    * realloc zmení veľkosť alokovanej pamäte na dvojnásobok.
+      realloc je nákladná operácia a tak sa oplatí radšej alokovať dopredu väčšiu časť pamäte ako alokovať po jednom
+      vstupe.
+    * Ak alokácia zlyhá, program vypíše chybu a uvoľní existujúcu pamäť.
+
+4. Ukončenie zadávania:
+    * Zadanie -1 ukončí zadávanie hodnôt.
+
+5. Výpis výsledkov:
+    * Všetky načítané hodnoty sú vypísané spolu s konečnou veľkosťou poľa a adresou.
+
+6. Uvoľnenie pamäte:
+    * Alokovaná pamäť je uvoľnená pomocou free.
 
 {{< /details >}}

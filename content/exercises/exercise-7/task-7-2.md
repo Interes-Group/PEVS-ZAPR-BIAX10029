@@ -25,8 +25,68 @@ Adresa alokovanej pamäte: 0x0000475d21a
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
+#include <stdlib.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+int main() {
+    int n;
+
+    // Požiadanie používateľa o zadanie počtu prvkov
+    printf("Enter the number of integers to allocate memory for: ");
+    scanf("%d", &n);
+
+    if (n <= 0) {
+        printf("Invalid number of blocks.\n");
+        return 1;
+    }
+
+    // Dynamická alokácia pamäte pre n prvkov typu int
+    int *array = (int *)malloc(n * sizeof(int));
+    if (array == NULL) {
+        printf("Memory allocation failed.\n");
+        return 1;
+    }
+
+    // Výpis adresy alokovanej pamäte
+    printf("Adresa alokovanej pamäte: %p\n", array);
+
+    // Zápis čísel od 1 do n do alokovanej pamäte
+    for (int i = 0; i < n; i++) {
+        array[i] = i + 1; // Hodnoty od 1 do n
+    }
+
+    // Výpis jednotlivých hodnôt a ich adries
+    for (int i = 0; i < n; i++) {
+        printf("%d. položka: adresa = %p ; hodnota = %d\n", i, &array[i], array[i]);
+    }
+
+    // Uvoľnenie alokovanej pamäte
+    free(array);
+
+    return 0;
+}
+```
+
+#### Vysvetlenie
+
+1. Vstup od používateľa:
+    * Používateľ zadá počet prvkov, pre ktoré sa má alokovať pamäť (n).
+
+2. Dynamická alokácia pamäte:
+    * malloc alokuje pamäť pre n prvkov typu int.
+    * Adresa alokovanej pamäte sa vypíše na začiatku.
+
+3. Zápis hodnôt do pamäte:
+    * Do každého prvku alokovaného poľa sa zapíše hodnota od 1 po n.
+
+4. Výpis hodnôt a ich adries:
+    * Iterácia cez alokovanú pamäť vypíše pre každý prvok:
+        * Index.
+        * Adresu pamäte, kde sa hodnota nachádza.
+        * Hodnotu prvku.
+
+5. Uvoľnenie pamäte:
+    * Dynamicky alokovaná pamäť sa uvoľní pomocou free na konci programu.
 
 {{< /details >}}
