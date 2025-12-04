@@ -55,8 +55,124 @@ Rok vydania: 1990
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+#define MAX_TITLE_LENGTH 100
+#define MAX_AUTHOR_LENGTH 100
+#define MAX_BOOKS 100
+
+// Štruktúra na reprezentáciu knihy
+typedef struct {
+    char title[MAX_TITLE_LENGTH];
+    char author[MAX_AUTHOR_LENGTH];
+    int year;
+} Book;
+
+// Funkcia na načítanie údajov zo súboru
+int loadBooks(const char *filename, Book books[]) {
+    FILE *file = fopen(filename, "r");
+    if (file == NULL) {
+        printf("Nepodarilo sa otvoriť súbor %s.\n", filename);
+        return -1;
+    }
+
+    int count = 0;
+    char line[256];
+    while (fgets(line, sizeof(line), file)) {
+        if (count >= MAX_BOOKS) {
+            printf("Dosiahnutý maximálny počet kníh (%d).\n", MAX_BOOKS);
+            break;
+        }
+
+        // Odstránenie nového riadku na konci
+        line[strcspn(line, "\n")] = '\0';
+
+        // Rozdelenie riadku podľa bodkočiarky
+        char *token = strtok(line, ";");
+        if (token != NULL) {
+            strncpy(books[count].title, token, MAX_TITLE_LENGTH - 1);
+            books[count].title[MAX_TITLE_LENGTH - 1] = '\0';
+        }
+
+        token = strtok(NULL, ";");
+        if (token != NULL) {
+            strncpy(books[count].author, token, MAX_AUTHOR_LENGTH - 1);
+            books[count].author[MAX_AUTHOR_LENGTH - 1] = '\0';
+        }
+
+        token = strtok(NULL, ";");
+        if (token != NULL) {
+            books[count].year = atoi(token);
+        }
+
+        count++;
+    }
+
+    fclose(file);
+    return count;
+}
+
+// Funkcia na vyhľadanie a výpis kníh podľa roku
+void printBooksByYear(Book books[], int count, int year) {
+    int found = 0;
+    for (int i = 0; i < count; i++) {
+        if (books[i].year == year) {
+            printf("Názov: %s\n", books[i].title);
+            printf("Autor: %s\n", books[i].author);
+            printf("Rok vydania: %d\n", books[i].year);
+            printf("---\n");
+            found = 1;
+        }
+    }
+
+    if (!found) {
+        printf("Žiadne knihy z roku %d.\n", year);
+    }
+}
+
+int main() {
+    Book books[MAX_BOOKS];
+    const char *filename = "books.txt";
+
+    // Načítanie kníh zo súboru
+    int bookCount = loadBooks(filename, books);
+    if (bookCount < 0) {
+        return 1; // Chyba pri načítaní
+    }
+
+    printf("Počet kníh v databáze: %d\n", bookCount);
+
+    // Zadanie roku od používateľa
+    int year;
+    printf("Zadajte rok vydania kníh: ");
+    scanf("%d", &year);
+
+    // Výpis kníh podľa roku
+    printBooksByYear(books, bookCount, year);
+
+    return 0;
+}
+```
+
+#### Vysvetlenie
+
+1. Štruktúra Book:
+    * Obsahuje názov knihy, autora a rok vydania.
+
+2. Načítanie zo súboru:
+    * Funkcia loadBooks otvára súbor books.txt a načítava knihy po riadkoch.
+    * Každý riadok je rozdelený na časti (title, author, year) pomocou strtok.
+    * Maximálny počet kníh je obmedzený na MAX_BOOKS.
+
+3. Vyhľadanie podľa roku:
+    * Funkcia printBooksByYear prechádza zoznam kníh a vypisuje knihy, ktoré zodpovedajú zadanému roku.
+
+4. Hlavný program:
+    * Načítava knihy zo súboru.
+    * Vypisuje počet kníh v databáze.
+    * Umožňuje používateľovi zadať rok a zobrazí zodpovedajúce knihy.
 
 {{< /details >}}

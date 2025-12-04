@@ -50,8 +50,87 @@ Priemerný vek: 20.33 Priemerný prospech: 1.77
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
+#include <stdlib.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+#define MAX_NAME_LENGTH 50
+
+// Definícia štruktúry pre reprezentáciu študenta
+typedef struct {
+    char name[MAX_NAME_LENGTH];
+    int age;
+    float averageGrade;
+} Student;
+
+int main() {
+    int numStudents;
+    printf("Zadajte počet študentov: ");
+    scanf("%d", &numStudents);
+
+    if (numStudents <= 0) {
+        printf("Počet študentov musí byť kladné číslo.\n");
+        return 1;
+    }
+
+    // Dynamická alokácia poľa študentov
+    Student *students = (Student *)malloc(numStudents * sizeof(Student));
+    if (students == NULL) {
+        printf("Nepodarilo sa alokovať pamäť.\n");
+        return 1;
+    }
+
+    // Načítanie údajov študentov
+    for (int i = 0; i < numStudents; i++) {
+        printf("\n%d. Študent\n", i + 1);
+        printf("Meno: ");
+        scanf(" %49s", students[i].name); // Obmedzenie na MAX_NAME_LENGTH - 1 znakov
+        printf("Vek: ");
+        scanf("%d", &students[i].age);
+        printf("Priemerný prospech: ");
+        scanf("%f", &students[i].averageGrade);
+    }
+
+    // Výpočet priemerného veku a priemerného prospechu
+    float totalAge = 0, totalGrade = 0;
+    for (int i = 0; i < numStudents; i++) {
+        totalAge += students[i].age;
+        totalGrade += students[i].averageGrade;
+    }
+
+    float averageAge = totalAge / numStudents;
+    float averageGrade = totalGrade / numStudents;
+
+    // Výpis výsledkov
+    printf("\nSumár študentov:\n");
+    printf("Priemerný vek: %.2f\n", averageAge);
+    printf("Priemerný prospech: %.2f\n", averageGrade);
+
+    // Uvoľnenie pamäte
+    free(students);
+
+    return 0;
+}
+```
+
+#### Vysvetlenie
+
+1. Definícia štruktúry:
+    * Štruktúra Student obsahuje položky name (pole znakov), age (vek), a averageGrade (priemerný prospech).
+
+2. Načítanie počtu študentov:
+    * Používateľ zadáva počet študentov.
+    * Pamäť pre pole študentov je dynamicky alokovaná pomocou malloc.
+
+3. Načítanie údajov:
+    * V cykle sa načítavajú údaje pre každého študenta.
+    * Funkcia scanf obmedzuje dĺžku vstupu pre meno na maximálne 49 znakov (jeden znak je rezervovaný pre \0).
+
+4. Výpočty:
+    * Po načítaní údajov sa vypočíta priemerný vek a priemerný prospech pomocou súčtov všetkých hodnôt.
+
+5. Výpis a uvoľnenie pamäte:
+    * Priemerné hodnoty sú vypísané s presnosťou na dve desatinné miesta.
+    * Dynamicky alokovaná pamäť sa uvoľní pomocou free.
 
 {{< /details >}}

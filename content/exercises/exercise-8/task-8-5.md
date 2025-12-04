@@ -38,8 +38,126 @@ Zadajte hodnotu prvku: -1
 
 {{< details title="Rozbaľ pre ukážku riešenia" closed="true" >}}
 
-Musím si počkať kým sa tu objaví príklad riešenia.
+```C
+#include <stdio.h>
+#include <stdlib.h>
 
-Nezabudni, že najviac sa naučíš ak to vypracuješ sám. 😉
+// Štruktúra pre uzol zreťazeného zoznamu
+typedef struct Node {
+    int value;
+    struct Node *next;
+} Node;
+
+// Funkcia na vytvorenie nového uzla
+Node* createNode(int value) {
+    Node* newNode = (Node*)malloc(sizeof(Node));
+    if (newNode == NULL) {
+        printf("Nepodarilo sa alokovať pamäť pre nový uzol.\n");
+        exit(1);
+    }
+    newNode->value = value;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Funkcia na pripojenie uzla na koniec zoznamu
+void appendNode(Node** head, int value) {
+    Node* newNode = createNode(value);
+
+    if (*head == NULL) {
+        // Ak je zoznam prázdny, nový uzol sa stane hlavou
+        *head = newNode;
+    } else {
+        // Inak nájdeme posledný uzol a pripojíme nový uzol
+        Node* current = *head;
+        while (current->next != NULL) {
+            current = current->next;
+        }
+        current->next = newNode;
+    }
+}
+
+// Funkcia na výpis zoznamu
+void printList(Node* head) {
+    Node* current = head;
+    if (current == NULL) {
+        printf("Zoznam je prázdny.\n");
+        return;
+    }
+    while (current != NULL) {
+        printf("%d", current->value);
+        if (current->next != NULL) {
+            printf(", ");
+        }
+        current = current->next;
+    }
+    printf("\n");
+}
+
+// Funkcia na uvoľnenie pamäte zoznamu
+void freeList(Node* head) {
+    Node* current = head;
+    while (current != NULL) {
+        Node* temp = current;
+        current = current->next;
+        free(temp);
+    }
+}
+
+int main() {
+    Node* head = NULL; // Hlava zoznamu
+    int input;
+
+    while (1) {
+        printf("\nZadajte hodnotu prvku (-1 pre ukončenie): ");
+        scanf("%d", &input);
+
+        if (input == -1) {
+            break;
+        }
+
+        if (input < 0) {
+            printf("Zadajte iba kladné čísla alebo -1 pre ukončenie.\n");
+            continue;
+        }
+
+        // Pridanie nového prvku do zoznamu
+        appendNode(&head, input);
+
+        // Výpis aktuálneho zoznamu
+        printf("Aktuálny zoznam: ");
+        printList(head);
+    }
+
+    // Uvoľnenie pamäte
+    freeList(head);
+    printf("Pamäť bola uvoľnená. Program ukončený.\n");
+
+    return 0;
+}
+```
+
+#### Vysvetlenie
+
+1. Štruktúra Node:
+    * Reprezentuje uzol zoznamu, obsahuje hodnotu (value) a pointer na ďalší uzol (next).
+
+2. Vytvorenie uzla:
+    * Funkcia createNode alokuje pamäť pre nový uzol a inicializuje ho hodnotou.
+
+3. Pripojenie uzla na koniec zoznamu:
+    * Funkcia appendNode pridá nový uzol na koniec zoznamu.
+    * Ak je zoznam prázdny, nový uzol sa stane hlavou.
+
+4. Výpis zoznamu:
+    * Funkcia printList prechádza zoznam a vypisuje hodnoty jednotlivých uzlov.
+
+5. Uvoľnenie pamäte:
+    * Funkcia freeList prejde všetky uzly zoznamu a uvoľní ich pamäť.
+
+6. Hlavný program:
+    * Používateľ opakovane zadáva hodnoty, ktoré sa pridávajú do zoznamu.
+    * Po každom pridaní sa vypíše aktuálny stav zoznamu.
+    * Program končí, keď používateľ zadá -1.
 
 {{< /details >}}
