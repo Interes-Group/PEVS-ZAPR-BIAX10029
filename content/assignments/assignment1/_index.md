@@ -5,6 +5,11 @@ title: 'Zadanie 1 - Gaming Stats Calculator'
 
 # PEVŠ ZAPR 2025 - Semestrálny projekt 1
 
+## Riešenie
+
+Jedno z možných riešení tohto zadania je zverejnené na GitHube 
+[https://github.com/Interes-Group/pevs-zapr2025-zadanie1-solution](https://github.com/Interes-Group/pevs-zapr2025-zadanie1-solution).
+
 ## Prihlásenie na zadanie
 
 > [!IMPORTANT]
